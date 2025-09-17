@@ -1,4 +1,4 @@
-# 🏔️ Snowflake Asset Management AI Demo
+# 🏔️ Snowflake Asset Management AI Transformation
 
 🎯 **Objective**: Build a comprehensive AI-powered asset management system that combines document search, portfolio analytics, and intelligent assistance capabilities.
 
@@ -395,7 +395,7 @@ GAM deployed a comprehensive AI research platform that delivers:
 
 - 💬 [Snowflake Community](https://community.snowflake.com/)
 - 📖 [Snowflake Documentation](https://docs.snowflake.com/)
-- 🤖 [Cortex AI Documentation](https://docs.snowflake.com/en/user-guide/snowflake-cortex)
-- 🔍 [Cortex Search Documentation](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-search)
-- 🧠 [Snowflake Intelligence Documentation](https://docs.snowflake.com/en/user-guide/snowflake-intelligence)
+- 🤖 [Cortex AI Documentation](https://docs.snowflake.com/en/guides-overview-ai-features)
+- 🔍 [Cortex Search Documentation](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-search/cortex-search-overview)
+- 🧠 [Snowflake Intelligence Documentation](https://docs.snowflake.com/en/user-guide/snowflake-cortex/snowflake-intelligence)
 
