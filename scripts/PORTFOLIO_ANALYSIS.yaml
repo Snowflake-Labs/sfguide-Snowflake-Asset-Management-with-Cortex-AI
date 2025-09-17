@@ -1,0 +1,140 @@
+name: PORTFOLIO_ANALYSIS
+description: semantic view of portfolio details
+tables:
+  - name: PORTFOLIO_HOLDINGS
+    base_table:
+      database: ASSET_MANAGEMENT_AI
+      schema: RESEARCH_ANALYTICS
+      table: PORTFOLIO_HOLDINGS
+    dimensions:
+      - name: HOLDING_ID
+        synonyms:
+          - holding_key
+          - portfolio_key
+          - security_id
+          - investment_id
+          - asset_id
+          - portfolio_identifier
+        description: Unique identifier for a specific holding within the portfolio.
+        expr: HOLDING_ID
+        data_type: VARCHAR(10)
+        sample_values:
+          - H001
+          - H002
+          - H003
+      - name: PORTFOLIO_NAME
+        synonyms:
+          - portfolio_title
+          - investment_portfolio
+          - fund_name
+          - account_name
+          - investment_title
+          - portfolio_title_name
+          - fund_title
+        description: The name of the investment portfolio, which categorizes the holdings into distinct groups based on their investment strategy or focus.
+        expr: PORTFOLIO_NAME
+        data_type: VARCHAR(50)
+        sample_values:
+          - Growth Fund Alpha
+          - ESG Impact Fund
+          - Emerging Markets Fund
+      - name: RISK_LEVEL
+        synonyms:
+          - risk_category
+          - risk_classification
+          - risk_rating
+          - risk_score
+          - risk_grade
+          - threat_level
+          - vulnerability_level
+          - danger_level
+          - hazard_level
+          - exposure_level
+        description: The risk level associated with a particular investment or asset in the portfolio, indicating the potential for volatility or loss, categorized as Low, Medium, or High.
+        expr: RISK_LEVEL
+        data_type: VARCHAR(20)
+        sample_values:
+          - Medium
+          - High
+          - Low
+      - name: SECTOR
+        synonyms:
+          - industry
+          - market_segment
+          - business_area
+          - category
+          - field
+          - domain
+          - classification
+        description: The sector classification of the portfolio holdings, indicating the primary industry or category to which the investment belongs.
+        expr: SECTOR
+        data_type: VARCHAR(50)
+        sample_values:
+          - Technology
+          - Healthcare
+          - ESG/Renewable
+      - name: SECURITY_NAME
+        synonyms:
+          - stock_name
+          - asset_name
+          - investment_name
+          - instrument_name
+          - financial_instrument
+          - security_title
+          - asset_title
+        description: The name of the security held in the portfolio, such as a company stock or bond.
+        expr: SECURITY_NAME
+        data_type: VARCHAR(100)
+        sample_values:
+          - Microsoft Corporation
+          - NVIDIA Corporation
+          - Johnson & Johnson
+    facts:
+      - name: MARKET_VALUE
+        synonyms:
+          - market_cap
+          - equity_value
+          - asset_value
+          - portfolio_value
+          - valuation
+          - net_asset_value
+          - total_value
+          - investment_value
+        description: The total value of the investment holdings in the portfolio, calculated by multiplying the number of shares held by the current market price of each security.
+        expr: MARKET_VALUE
+        data_type: NUMBER(15,2)
+        sample_values:
+          - '2500000.00'
+          - '1800000.00'
+          - '1500000.00'
+      - name: WEIGHT_PERCENT
+        synonyms:
+          - percentage_allocation
+          - allocation_percentage
+          - percent_holding
+          - portfolio_weight
+          - proportion
+          - allocation_ratio
+        description: The percentage weight of each holding within the portfolio, representing the proportion of the total portfolio value allocated to each individual holding.
+        expr: WEIGHT_PERCENT
+        data_type: NUMBER(5,2)
+        sample_values:
+          - '8.33'
+          - '7.33'
+          - '6.00'
+    time_dimensions:
+      - name: LAST_UPDATED
+        synonyms:
+          - last_modified
+          - updated_at
+          - last_changed
+          - modified_date
+          - date_updated
+          - last_refreshed
+          - updated_date
+          - last_revision_date
+        description: The date and time when the portfolio holdings were last updated.
+        expr: LAST_UPDATED
+        data_type: DATE
+        sample_values:
+          - '2024-02-15'
