@@ -242,7 +242,7 @@ If you have additional research documents to add later:
 ## 6️⃣ Step 6: Create and Test Snowflake Intelligence Agent
 
 #### 6.1 Access Snowflake Intelligence
-1. Navigate to **AI & ML → Snowflake Intelligence** in Snowsight
+1. Navigate to **AI & ML → Agents** in Snowsight
 2. Click **+ Agent** to create a new agent
 
 #### 6.2 Configure Agent Basic Settings
@@ -251,8 +251,8 @@ Configure your agent with these details:
 - **Agent Name**: `Research_Assistant`
 - **Display Name**: `Research Assistant`
 - **Click Create**
-- **Click Edit** and navigate to Instructions
-- **Instructions**: Copy and paste this instruction set:
+- **Click Edit** and navigate to Orchestration
+- **Instructions**: Copy and paste this instruction set in Orchestration instructions:
 ```
 You are an expert investment research assistant for Global Asset Management. You have access to:
 
@@ -269,25 +269,25 @@ Your role is to:
 Always provide data-driven responses and cite relevant sources when possible.
 ```
 
-#### 6.3 Add Cortex Search Tool
-1. Navigate to **Tools**
-2. Click **+ Add Tool**
-3. Select **Cortex Search**
-4. **Name**: `Document_search`
-5. **Tool Description**: `Search through investment research documents and reports`
-6. Choose the `INVESTMENT_SEARCH_SVC` service created in Step 4
-7. Click **Add**
-
-#### 6.4 Add Cortex Analyst Tool
+#### 6.3 Add Cortex Analyst Tool
 1. From **Tools**, click **+ Add Tool** again
 2. Select **Cortex Analyst**
 3. **Select semantic model file**: Choose the file we uploaded when creating Cortex Analyst
-4. **Select database/schema/stage**: Choose `ASSET_MANAGEMENT_AI` → `RESEARCH_ANALYTICS` → `RESEARCH_DOCS` and select the file we uploaded
+4. **Select database/schema/stage**: Choose `ASSET_MANAGEMENT_AI` → `RESEARCH_ANALYTICS` → `RESEARCH_DOCS` and select the file we uploaded (`semantic_models/PORTFOLIO_ANALYSIS.yaml`)
 5. Add the following details:
    - **Name**: `Portfolio_analysis`
    - **Description**: `Analyze portfolio data and generate insights` or generate via Cortex
    - **Timeout**: 60 seconds
 6. Click **Add**
+
+#### 6.4 Add Cortex Search Tool
+1. Navigate to **Tools**
+2. Click **+ Add Tool**
+3. Select **Cortex Search**
+4. **Name**: `Document_search`
+5. **Tool Description**: `Search through investment research documents and reports`
+6. Choose `ASSET_MANAGEMENT_AI` → `RESEARCH_ANALYTICS` → `INVESTMENT_SEARCH_SVC` service created in Step 4
+7. Click **Add**
 
 #### 6.5 Finalize and Test Agent
 1. Review all settings and tools
@@ -342,7 +342,7 @@ Always provide data-driven responses and cite relevant sources when possible.
 3. This file contains the complete interactive dashboard for portfolio analytics and document search
 
 #### 7.2 Create New Streamlit App
-1. In Snowsight, navigate to **Streamlit** in the left sidebar
+1. In Snowsight, navigate to **Projects** → **Streamlit** in the left sidebar
 2. Click **+ Streamlit App**
 3. Configure the app:
    - **Name**: `GAM Research Assistant App` (or similar)
