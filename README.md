@@ -1,3 +1,5 @@
+[![Snowflake - Certified](https://img.shields.io/badge/Snowflake-Certified-2ea44f?style=for-the-badge&logo=snowflake)](https://developers.snowflake.com/solutions/)
+
 # 🏔️ Snowflake Asset Management AI Transformation
 
 🎯 **Objective**: Build a comprehensive AI-powered asset management system that combines document search, portfolio analytics, and intelligent assistance capabilities.
