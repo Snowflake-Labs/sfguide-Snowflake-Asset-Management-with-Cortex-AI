@@ -89,19 +89,19 @@ CREATE OR REPLACE TABLE PORTFOLIO_HOLDINGS (
 
 -- Insert sample portfolio data aligned with the research documents (ie technology/health/esg/real estate/utilities sectors)
 INSERT INTO PORTFOLIO_HOLDINGS VALUES
-('H001', 'Growth Fund Alpha', 'Microsoft Corporation', 'Technology', 2500000.00, 8.33, 'Medium', '2024-02-15'),
-('H002', 'Growth Fund Alpha', 'NVIDIA Corporation', 'Technology', 2200000.00, 7.33, 'High', '2024-02-15'),
-('H003', 'Growth Fund Alpha', 'Johnson & Johnson', 'Healthcare', 1800000.00, 6.00, 'Low', '2024-02-15'),
-('H004', 'Growth Fund Alpha', 'Pfizer Inc', 'Healthcare', 1500000.00, 5.00, 'Medium', '2024-02-15'),
-('H005', 'ESG Impact Fund', 'Tesla Inc', 'Technology', 1200000.00, 12.00, 'High', '2024-02-15'),
-('H006', 'ESG Impact Fund', 'Vestas Wind Systems', 'ESG/Renewable', 800000.00, 8.00, 'Medium', '2024-02-15'),
-('H007', 'ESG Impact Fund', 'Unilever PLC', 'Consumer Goods', 600000.00, 6.00, 'Low', '2024-02-15'),
-('H008', 'Emerging Markets Fund', 'Taiwan Semiconductor', 'Technology', 1000000.00, 10.00, 'High', '2024-02-15'),
-('H009', 'Emerging Markets Fund', 'Tencent Holdings', 'Technology', 900000.00, 9.00, 'High', '2024-02-15'),
-('H010', 'Real Estate Fund', 'American Tower Corp', 'Real Estate', 750000.00, 15.00, 'Medium', '2024-02-15'),
-('H011', 'Real Estate Fund', 'Prologis Inc', 'Real Estate', 650000.00, 13.00, 'Medium', '2024-02-15'),
-('H012', 'Conservative Income', 'Vanguard REIT ETF', 'Real Estate', 500000.00, 10.00, 'Low', '2024-02-15'),
-('H013', 'Utilities Income Fund', 'NextEra Energy Inc', 'Utilities', 950000.00, 9.50, 'Low', '2024-02-15');
+('H001', 'Growth Fund Alpha', 'Microsoft Corporation', 'Technology', 2500000.00, 16.29, 'Medium', '2024-02-15'),
+('H002', 'Growth Fund Alpha', 'NVIDIA Corporation', 'Technology', 2200000.00, 14.33, 'High', '2024-02-15'),
+('H003', 'Growth Fund Alpha', 'Johnson & Johnson', 'Healthcare', 1800000.00, 11.73, 'Low', '2024-02-15'),
+('H004', 'Growth Fund Alpha', 'Pfizer Inc', 'Healthcare', 1500000.00, 9.77, 'Medium', '2024-02-15'),
+('H005', 'ESG Impact Fund', 'Tesla Inc', 'Technology', 1200000.00, 7.82, 'High', '2024-02-15'),
+('H006', 'ESG Impact Fund', 'Vestas Wind Systems', 'ESG/Renewable', 800000.00, 5.21, 'Medium', '2024-02-15'),
+('H007', 'ESG Impact Fund', 'Unilever PLC', 'Consumer Goods', 600000.00, 3.91, 'Low', '2024-02-15'),
+('H008', 'Emerging Markets Fund', 'Taiwan Semiconductor', 'Technology', 1000000.00, 6.51, 'High', '2024-02-15'),
+('H009', 'Emerging Markets Fund', 'Tencent Holdings', 'Technology', 900000.00, 5.86, 'High', '2024-02-15'),
+('H010', 'Real Estate Fund', 'American Tower Corp', 'Real Estate', 750000.00, 4.89, 'Medium', '2024-02-15'),
+('H011', 'Real Estate Fund', 'Prologis Inc', 'Real Estate', 650000.00, 4.23, 'Medium', '2024-02-15'),
+('H012', 'Conservative Income', 'Vanguard REIT ETF', 'Real Estate', 500000.00, 3.26, 'Low', '2024-02-15'),
+('H013', 'Utilities Income Fund', 'NextEra Energy Inc', 'Utilities', 950000.00, 6.19, 'Low', '2024-02-15');
 
 -- Grant SELECT privileges on all tables for Cortex Analyst semantic models
 GRANT SELECT ON ALL TABLES IN SCHEMA ASSET_MANAGEMENT_AI.public TO ROLE asset_management_ai_role;
